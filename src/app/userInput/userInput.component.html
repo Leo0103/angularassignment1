@@ -1,0 +1,15 @@
+<label>Enter Username</label>
+<input type="text" class="form-control" 
+[(ngModel)]="userName">
+<p>{{userName}}</p>
+
+
+<!-- the logic to make the button disabled is that 
+    if userName === '' emptry strings, disable the button.
+but if you type inside of the input box, the 
+button becomes enabled
+the === is to check something, the = is to assign something-->
+<button class="btn btn-primary"
+[disabled] = "userName === ''"
+
+(click)="onCreateUser()">Create new user</button>
